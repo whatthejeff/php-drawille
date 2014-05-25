@@ -58,6 +58,8 @@ echo $turtle->frame(), "\n";
 
 ## Tests
 
+[![Build Status](https://travis-ci.org/whatthejeff/php-drawille.png?branch=master)](https://travis-ci.org/whatthejeff/php-drawille)
+
 To run the test suite, you need [composer](http://getcomposer.org).
 
     $ php composer.phar install
