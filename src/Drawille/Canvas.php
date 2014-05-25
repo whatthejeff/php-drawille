@@ -155,15 +155,9 @@ class Canvas
 
         if(!isset($options['min_x']) || !isset($options['max_x'])) {
             $flattened = array();
-            array_walk_recursive(
-                array_reduce($this->chars, function ($carry, $item) {
-                    $carry[] = array_keys($item);
-                    return $carry;
-                }, []),
-                function ($x) use (&$flattened) {
-                    $flattened[] = $x;
-                }
-            );
+            foreach($this->chars as $key => $char) {
+                $flattened = array_merge($flattened, array_keys($char));
+            }
         }
 
         $options['min_x'] = isset($options['min_x']) ? $options['min_x'] : min($flattened);
