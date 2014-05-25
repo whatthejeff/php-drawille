@@ -13,40 +13,40 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use Drawille\Canvas;
 
-$s = new Canvas();
+$canvas = new Canvas();
 
 for($x = 0; $x <= 1800; $x++) {
-    $s->set($x/10, sin($x * M_PI / 180) * 10);
+    $canvas->set($x / 10, sin($x * M_PI / 180) * 10);
 }
 
-echo $s->frame(), "\n";
-$s->clear();
+echo $canvas->frame(), "\n";
+$canvas->clear();
 
 for($x = 0; $x <= 1800; $x += 10) {
-    $s->set($x/10, 10 + sin($x * M_PI / 180) * 10);
-    $s->set($x/10, 10 + cos($x * M_PI / 180) * 10);
+    $canvas->set($x / 10, 10 + sin($x * M_PI / 180) * 10);
+    $canvas->set($x / 10, 10 + cos($x * M_PI / 180) * 10);
 }
 
-echo $s->frame(), "\n";
-$s->clear();
+echo $canvas->frame(), "\n";
+$canvas->clear();
 
 for($x = 0; $x <= 3600; $x += 20) {
-    $s->set($x/20, 4 + sin($x * M_PI / 180) * 4);
+    $canvas->set($x / 20, 4 + sin($x * M_PI / 180) * 4);
 }
 
-echo $s->frame(), "\n";
-$s->clear();
+echo $canvas->frame(), "\n";
+$canvas->clear();
 
 for($x = 0; $x <= 360; $x += 4) {
-    $s->set($x/4, 30 + sin($x * M_PI / 180) * 30);
+    $canvas->set($x / 4, 30 + sin($x * M_PI / 180) * 30);
 }
 
 for($x = 0; $x <= 30; $x++) {
     for($y = 0; $y <= 30; $y++) {
-        $s->set($x, $y);
-        $s->toggle($x+30, $y+30);
-        $s->toggle($x+60, $y);
+        $canvas->set($x, $y);
+        $canvas->toggle($x+30, $y+30);
+        $canvas->toggle($x+60, $y);
     }
 }
 
-echo $s->frame(), "\n";
+echo $canvas->frame(), "\n";
