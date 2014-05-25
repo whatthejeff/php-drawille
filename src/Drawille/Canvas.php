@@ -120,7 +120,7 @@ class Canvas
      * @return string line
      */
     public function row($y, array $options = []) {
-        $row = $this->chars[$y];
+        $row = isset($this->chars[$y]) ? $this->chars[$y] : [];
 
         if(!isset($options['min_x']) || !isset($options['max_x'])) {
             if(!($keys = array_keys($row))) {
