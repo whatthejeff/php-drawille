@@ -21,6 +21,41 @@ run the `php composer.phar install` command to install it:
 }
 ~~~
 
+## Usage
+
+~~~php
+use Drawille\Canvas;
+
+$canvas = new Canvas();
+
+for($x = 0; $x <= 1800; $x += 10) {
+    $canvas->set($x / 10, 10 + sin($x * M_PI / 180) * 10);
+}
+
+echo $canvas->frame(), "\n";
+~~~
+
+![Usage example](docs/images/sin.png)
+
+~~~php
+use Drawille\Turtle;
+
+$turtle = new Turtle();
+
+for($x = 0; $x < 36; $x++) {
+    $turtle->right(10);
+
+    for($y = 0; $y < 36; $y++) {
+        $turtle->right(10);
+        $turtle->forward(8);
+    }
+}
+
+echo $turtle->frame(), "\n";
+~~~
+
+![Turtle example](docs/images/turtle.png)
+
 ## Tests
 
 To run the test suite, you need [composer](http://getcomposer.org).

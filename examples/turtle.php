@@ -13,7 +13,7 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use Drawille\Turtle;
 
-$turtle = new Turtle(300, 300);
+$turtle = new Turtle();
 
 for($x = 0; $x < 36; $x++) {
     $turtle->right(10);
