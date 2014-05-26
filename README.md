@@ -3,6 +3,8 @@ php-drawille
 
 Terminal drawing with [braille](http://en.wikipedia.org/wiki/Braille).
 
+![Octocat example](docs/images/octocat.png)
+
 ## Requirements
 
 php-drawille requires PHP 5.4.0 or later.
