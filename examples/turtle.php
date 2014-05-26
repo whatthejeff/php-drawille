@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Drawille\Turtle;
 
 $turtle = new Turtle();
 
-for($x = 0; $x < 36; $x++) {
+for ($x = 0; $x < 36; $x++) {
     $turtle->right(10);
 
-    for($y = 0; $y < 36; $y++) {
+    for ($y = 0; $y < 36; $y++) {
         $turtle->right(10);
         $turtle->forward(8);
     }
