@@ -1,7 +1,7 @@
 {
-    "name": "whatthejeff/image2term",
-    "description": "drawille image2term example",
-    "keywords": ["terminal","console","braille","drawing","image"],
+    "name": "whatthejeff/drawille-examples",
+    "description": "drawille examples",
+    "keywords": ["terminal","console","braille","drawing","xkcd","octocat","image"],
     "homepage": "http://github.com/whatthejeff/drawille",
     "license": "MIT",
     "authors": [
