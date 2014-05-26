@@ -34,7 +34,6 @@ class TurtleTest extends \PHPUnit_Framework_TestCase
         $this->turtle->right(30);
         $this->assertEquals(30, $this->turtle->getRotation());
 
-
         $this->turtle->left(30);
         $this->assertEquals(0, $this->turtle->getRotation());
     }

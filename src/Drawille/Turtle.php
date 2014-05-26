@@ -146,7 +146,7 @@ class Turtle extends Canvas
      * @param int $y new y position
      */
     public function move($x, $y) {
-      if(!$this->up) {
+      if (!$this->up) {
         $x1 = round($this->x);
         $y1 = round($this->y);
         $x2 = $x;
@@ -160,16 +160,16 @@ class Turtle extends Canvas
 
         $r = max($xdiff, $ydiff);
 
-        for($i = 0; $i <= $r; $i++) {
+        for ($i = 0; $i <= $r; $i++) {
             $x = $x1;
             $y = $y1;
 
             if ($ydiff > 0) {
-                $y += ((float)$i*$ydiff)/$r*$ydir;
+                $y += ((float)$i * $ydiff) / $r * $ydir;
             }
 
-            if($xdiff > 0) {
-                $x += ((float)$i*$xdiff)/$r*$xdir;
+            if ($xdiff > 0) {
+                $x += ((float)$i * $xdiff) / $r * $xdir;
             }
 
             $this->set($x, $y);
@@ -184,14 +184,14 @@ class Turtle extends Canvas
      * Pull the pen up
      */
     public function pu() {
-         $this->up();
+        $this->up();
     }
 
     /**
      * Push the pen up
      */
     public function pd() {
-         $this->down();
+        $this->down();
     }
 
     /**
@@ -200,7 +200,7 @@ class Turtle extends Canvas
      * @param integer $length distance to move forward
      */
     public function fd($length) {
-         $this->forward($length);
+        $this->forward($length);
     }
 
     /**
@@ -210,7 +210,7 @@ class Turtle extends Canvas
      * @param int $y new y position
      */
     public function mv($x, $y) {
-         $this->move($x, $y);
+        $this->move($x, $y);
     }
 
     /**
@@ -219,7 +219,7 @@ class Turtle extends Canvas
      * @param integer $angle degree to angle
      */
     public function rt($angle) {
-         $this->right($angle);
+        $this->right($angle);
     }
 
     /**
@@ -228,7 +228,7 @@ class Turtle extends Canvas
      * @param integer $angle degree to angle
      */
     public function lt($angle) {
-         $this->left($angle);
+        $this->left($angle);
     }
 
     /**
@@ -237,6 +237,6 @@ class Turtle extends Canvas
      * @param integer $length distance to move backwards
      */
     public function bk($length) {
-         $this->back($length);
+        $this->back($length);
     }
 }

@@ -53,13 +53,6 @@ class Canvas
     private $chars = [];
 
     /**
-     * Constructor
-     */
-    public function __construct() {
-        $this->clear();
-    }
-
-    /**
      * Clears the canvas
      */
     public function clear() {
@@ -98,7 +91,7 @@ class Canvas
      */
     public function get($x, $y) {
         list($x, $y, , , $char) = $this->prime($x, $y);
-        return (bool)($char & $this->getDotFromMap($x, $y));
+        return (bool) ($char & $this->getDotFromMap($x, $y));
     }
 
     /**
@@ -122,8 +115,8 @@ class Canvas
     public function row($y, array $options = []) {
         $row = isset($this->chars[$y]) ? $this->chars[$y] : [];
 
-        if(!isset($options['min_x']) || !isset($options['max_x'])) {
-            if(!($keys = array_keys($row))) {
+        if (!isset($options['min_x']) || !isset($options['max_x'])) {
+            if (!($keys = array_keys($row))) {
                 return '';
             }
         }
@@ -144,8 +137,8 @@ class Canvas
      * @return array line
      */
     public function rows(array $options = []) {
-        if(!isset($options['min_y']) || !isset($options['max_y'])) {
-            if(!($keys = array_keys($this->chars))) {
+        if (!isset($options['min_y']) || !isset($options['max_y'])) {
+            if (!($keys = array_keys($this->chars))) {
                 return [];
             }
         }
@@ -153,9 +146,9 @@ class Canvas
         $min = isset($options['min_y']) ? $options['min_y'] : min($keys);
         $max = isset($options['max_y']) ? $options['max_y'] : max($keys);
 
-        if(!isset($options['min_x']) || !isset($options['max_x'])) {
+        if (!isset($options['min_x']) || !isset($options['max_x'])) {
             $flattened = array();
-            foreach($this->chars as $key => $char) {
+            foreach ($this->chars as $key => $char) {
                 $flattened = array_merge($flattened, array_keys($char));
             }
         }
@@ -228,7 +221,7 @@ class Canvas
         $px = floor($x / 2);
         $py = floor($y / 4);
 
-        if(!isset($this->chars[$py][$px])) {
+        if (!isset($this->chars[$py][$px])) {
             $this->chars[$py][$px] = 0;
         }
 
