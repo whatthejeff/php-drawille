@@ -52,8 +52,6 @@ class Turtle extends Canvas
      * @param int $y starting y position
      */
     public function __construct($x = 0, $y = 0) {
-        parent::__construct();
-
         $this->x = $x;
         $this->y = $y;
     }
