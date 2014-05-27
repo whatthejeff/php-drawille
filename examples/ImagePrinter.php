@@ -73,7 +73,7 @@ class ImagePrinter
             }
         }
 
-        if($this->fab) {
+        if ($this->fab) {
             $fab = new SuperFab();
             echo $fab->paint($canvas->frame()), "\n";
         }

@@ -60,7 +60,7 @@ echo $turtle->frame(), "\n";
 
 ## Examples
 
-To use the scripts in the `examples` directory, you need to install the
+To use the scripts in the [examples](examples) directory, you need to install the
 dependencies with composer.
 
     $ cd examples
