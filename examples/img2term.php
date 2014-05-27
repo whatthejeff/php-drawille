@@ -66,6 +66,12 @@ class Command extends ConsoleCommand
                  'Image resize ratio'
              )
              ->addOption(
+                 'fab',
+                 'f',
+                 InputOption::VALUE_NONE,
+                 'Make the output fabulous'
+             )
+             ->addOption(
                  'invert',
                  'i',
                  InputOption::VALUE_NONE,
@@ -81,7 +87,8 @@ class Command extends ConsoleCommand
             $input->getArgument('image'),
             $input->getOption('threshold'),
             $input->getOption('ratio'),
-            $input->getOption('invert')
+            $input->getOption('invert'),
+            $input->getOption('fab')
         );
 
         $printer->run($terminalWidth, $terminalHeight);

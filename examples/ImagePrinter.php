@@ -15,18 +15,22 @@ use Imagine\Image\Point;
 
 use Drawille\Canvas;
 
+use Fab\SuperFab;
+
 class ImagePrinter
 {
     private $image;
     private $threshold;
     private $ratio;
     private $invert;
+    private $fab;
 
-    public function __construct($image, $threshold = 385.2, $ratio = null, $invert = false) {
+    public function __construct($image, $threshold = 385.2, $ratio = null, $invert = false, $fab = false) {
         $this->image = $image;
         $this->threshold = (float) $threshold;
         $this->ratio = $ratio;
         $this->invert = $invert;
+        $this->fab = $fab;
     }
 
     public function run($terminalWidth, $terminalHeight) {
@@ -69,7 +73,14 @@ class ImagePrinter
             }
         }
 
-        echo $canvas->frame(), "\n";
+        if($this->fab) {
+            $fab = new SuperFab();
+            echo $fab->paint($canvas->frame()), "\n";
+        }
+
+        else {
+            echo $canvas->frame(), "\n";
+        }
     }
 }
 

@@ -16,6 +16,7 @@
         "symfony/console": "~2.4",
         "fabpot/Goutte": "~2.0",
         "whatthejeff/drawille": "~1.0",
+        "whatthejeff/fab": "~1.0",
         "ext-gd": "*"
     },
     "autoload": {

@@ -58,6 +58,17 @@ echo $turtle->frame(), "\n";
 
 ![Turtle example](docs/images/turtle.png)
 
+## Examples
+
+To use the scripts in the `examples` directory, you need to install the
+dependencies with composer.
+
+    $ cd examples
+    $ php composer.phar install
+    $ ./img2term.php --fab --threshold 600 ~/Pictures/sb.png
+
+![img2term example](docs/images/sb.png)
+
 ## Tests
 
 [![Build Status](https://travis-ci.org/whatthejeff/php-drawille.png?branch=master)](https://travis-ci.org/whatthejeff/php-drawille)
