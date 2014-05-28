@@ -94,7 +94,7 @@ class Command extends ConsoleCommand
                 $filter = $crawler->filter('.preview-image > img');
                 $total = iterator_count($filter);
 
-                if($cat == 'random') {
+                if ($cat == 'random') {
                     $cat = mt_rand(1, $total);
                 }
 
